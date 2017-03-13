@@ -1,0 +1,71 @@
+.bd{
+    background-image: url(../images/bw3.jpg);
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #000;
+}
+body{
+    background-color: ivory;
+    margin: 5%;
+    padding-left:  100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.container{
+    margin:0 auto;
+	background-color: #000;
+	color: #FFF;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	opacity: 0.95;
+}
+h1{
+    color: black;
+    font-family: 'Lobster Two', cursive;
+    font-size: 3em;
+    }
+h2{
+    color: black;
+    font-family: 'Lobster Two', cursive;
+}
+
+p{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 1.2em;
+}
+.intro{
+    font-size: 1.5em;
+}
+nav{
+    display: block;
+}
+nav li{
+    
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+}
+nav a{
+    color: cadetblue;
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+ nav a:hover {
+     text-decoration: none;
+    color: white;
+    transition:  color 1s ease-in-out;
+}
+a{
+    color: red;
+}
+a:hover {
+    color: cyan;
+    transition:  color 1s ease-in-out;
+}

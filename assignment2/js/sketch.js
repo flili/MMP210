@@ -20,6 +20,7 @@ function setup() {
     
     
     //cupcake
+    
     triangle(390,300,410,350,450,300);
     triangle(510,300,490,350,450,300);
     rect(410,300,80,50);

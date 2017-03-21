@@ -18,5 +18,6 @@ function draw() {
     if (x > width) {
         x = 0;
     }
+    if( y>)
 
 }

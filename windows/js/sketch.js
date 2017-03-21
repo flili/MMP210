@@ -1,44 +1,36 @@
-function setup() {
-    //use code to create and draw on browser
-    //createCanvas(width, height)
-    createCanvas(1740, 1740);
+// windows
+function setup() { 
+   createCanvas(740,2500);
     noStroke();
 }
-function draw () {
-    //background(145, 86, 87);
-    //example class
-    
-    var windowWidth = width/6; // window width
-    var windowHeight = height/2; // window height
+
+function draw() {
+//Building background color 
+    background(51, 63, 55);
+// 6 windows inline
+    var windowWidth = width/3; // window width
+// 4 windows down
+    var windowHeight = height/4; // window height
     
     for ( var x = windowWidth/4; x < width; x+=windowWidth) {
-       for (var y = windowHeight/4; y < height; y+=windowHeight) {
+    for (var y = windowHeight/4; y < height; y+=windowHeight) {
            
-           fill(167, 82, 54);
+           fill(20, 31, 25);
            rect(x, y, windowWidth/2, windowHeight/2);
+//shadow top curtain window
+           fill(131,67,73);
            
-           fill("black");
-           stroke(167, 82, 54);
-           
-           rect(x, y, windowWidth/4, windowHeight/8);
-           rect(x, y + windowHeight/8, windowWidth/4, windowHeight/8);
+           rect(x, y, windowWidth/2, windowHeight/8);
+//curtain widow
+           fill(186,82,76);
+           rect(x, y + windowHeight/8, windowWidth/2, windowHeight/4);
            rect(x + windowWidth/4, y + windowHeight/8, windowWidth/4, windowHeight/8);
            rect(x + windowWidth/4, y + windowHeight/8 * 2, windowWidth/4, windowHeight/8);
+//top window
+           
            
            
         }
     }
         
 }
-    
-    
-    
-    
-    //myWidow 
-    //two points, numbers in (x1, y1 ; x2, y2)
-    //fill(60, 59, 60)
-    //ellipse right-left,up-down, width, height
-    //triangle(280,60,200,95,375,95)
-    //rect(185,95,200,370)
-}
-   

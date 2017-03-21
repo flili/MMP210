@@ -14,6 +14,8 @@ function draw() {
     
     
 //colors
+    //green
+    var g = color (51, 63, 55);
     //light Green
     var lg = color (143, 151, 123);
     //dark Green
@@ -34,7 +36,7 @@ function draw() {
         rect(x, y, windowWidth/2, windowHeight/8);
 //curtain widow
         fill(lo);
-        rect(x, y + windowHeight/8, windowWidth/2, windowHeight/4);
+        rect(x, y + windowHeight/9, windowWidth/2, windowHeight/4);
 //curtain shadow down
         fill(dn);
         noStroke();
@@ -52,11 +54,19 @@ function draw() {
         rect(x + windowWidth/y, y + windowHeight/13, windowWidth/2, windowHeight/4.7);
         
 //top window
+    //shadow
         noStroke();
+        fill(lg);
+        
+        rect(x-33, y-2, windowWidth/1.3, windowHeight/25);
+        
         fill(dg);
         rect(x-20, y+5, windowWidth/1.5, windowHeight/15,x);
         
-        rect(x-33, y, windowWidth/1.3, windowHeight/25);
+        rect(x-34, y, windowWidth/1.28, windowHeight/25);
+        
+    //
+        
         
 //Bottom Window
         

@@ -14,7 +14,7 @@ function draw() {
     
     for ( var x = windowWidth/4; x < width; x+=windowWidth) {
     for (var y = windowHeight/4; y < height; y+=windowHeight) {
-           
+        noStroke();
         fill(20, 31, 25);
         rect(x, y, windowWidth/2, windowHeight/2);
 //shadow top curtain window

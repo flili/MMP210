@@ -28,8 +28,10 @@ function draw() {
         noStroke();
         rect(x, y+windowHeight/3.5, windowWidth/2, windowHeight/10);
 //marco
+        stroke(0);
         noFill();
-           //rect(x + windowWidth/4, y + windowHeight/8 * 2, windowWidth/4, windowHeight/8);
+        strokeWeight(4)
+           rect(x + windowWidth/500, y + windowHeight/16 * 2, windowWidth/2, windowHeight/4);
 //top window
            
            

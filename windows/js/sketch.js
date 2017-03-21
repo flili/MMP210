@@ -30,10 +30,15 @@ function draw() {
 //marco
         stroke(0);
         noFill();
+        noFill();
         strokeWeight(4)
            rect(x + windowWidth/500, y + windowHeight/16 * 2, windowWidth/2, windowHeight/4);
 //top window
-           
+        fill(175,181,146);
+        line(x, windowWidth/2, windowHeight/2);
+        noStroke();
+        fill(20, 31, 25);
+        rect(x-20, y-20, windowWidth/1.5, windowHeight/10,x);
            
            
         }

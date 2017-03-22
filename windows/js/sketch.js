@@ -24,15 +24,15 @@ function draw() {
     var dn = color (131,67,73);
     //light Orange
     var lo = color (186,82,76);
-    
+
     
     for ( var x = windowWidth/4; x < width; x+=windowWidth) {
     for (var y = windowHeight/4; y < height; y+=windowHeight) {
         
         
         noStroke();
-        fill(20, 31, 25);
-        rect(x, y, windowWidth/2, windowHeight/2);
+        fill(dg);
+        rect(x-10, y, windowWidth/2+15, windowHeight/2);
 
 //shadow top curtain window
         fill(dn);
@@ -48,30 +48,52 @@ function draw() {
         rect(x, y+windowHeight/3.5, windowWidth/2, windowHeight/10);
         
 //marco
+//marco inside window
+        noFill();
+        stroke(255);
+        strokeWeight(8);
+        rect(x-4, y+10, windowWidth/2+10, windowHeight/2-85);
+//actual marco inside
         
         
         
+        
+        stroke(g);
+        strokeWeight(4);
+        rect(x+12, y+11, windowWidth/2-22, windowHeight/2-87);
 //marco back
     //orange shadow outside
         stroke(dn);
-        noFill(0);
-        rect(x + windowWidth/y, y + windowHeight/12, windowWidth/2+2, windowHeight/2.5);
-        
-    //light green shadow inside
+        strokeWeight(8);
+        noFill();
+        rect(x + windowWidth/y-4, y + windowHeight/16, windowWidth/2+13, windowHeight/2.3);
+//marco half
+        strokeWeight(8);
+        stroke(dg);
+        noFill();
+        rect(x + windowWidth/y, y + windowHeight/13-6, windowWidth/2, windowHeight/4.5);
+//actual marco half 
+        strokeWeight(6);
+        stroke(g);
+        noFill();
+        rect(x + windowWidth/y, y + windowHeight/13-6, windowWidth/2, windowHeight/4.5);
+
+//light green shadow inside
         noFill();
         stroke(lg);
-        strokeWeight(2);
-        rect(x-2.1 + windowWidth/y, y + windowHeight/12, windowWidth/2-5, windowHeight/2.5);
-           
-        stroke(dg);
-        strokeWeight(12);
-        rect(x + windowWidth/y, y + windowHeight/15, windowWidth/2, windowHeight/2.5);
-//marco half
-        strokeWeight(12);
-        stroke(dg);
-        noFill();
-        rect(x + windowWidth/y, y + windowHeight/13, windowWidth/2, windowHeight/4.7);
+        strokeWeight(4);
+        rect(x-2.1 + windowWidth/y, y + windowHeight/12-7, windowWidth/2-5, windowHeight/2.5);
+
+//shadow marco front window
+        stroke(255);
+        strokeWeight(10);
+        rect(x-5 + windowWidth/y, y + windowHeight/15-10, windowWidth/2+10, windowHeight/2.35);
         
+//actual marco font window
+        stroke(g);
+        strokeWeight(8);
+        rect(x-5 + windowWidth/y, y + windowHeight/15-10, windowWidth/2+10, windowHeight/2.35);
+
 //top window
         noStroke();
         
@@ -88,9 +110,9 @@ function draw() {
     //actual window
         
         fill(g);
-        rect(x-20, y+15, windowWidth/1.5, windowHeight/30,x);
+        rect(x-15, y+10, windowWidth/1.6, windowHeight/20,x);
         
-        rect(x-24, y, windowWidth/1.28, windowHeight/25);
+        rect(x-30, y, windowWidth/1.35, windowHeight/30);
         
         
 //Bottom Window

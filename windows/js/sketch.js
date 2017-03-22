@@ -50,23 +50,20 @@ function draw() {
 //marco
 //marco inside window
         noFill();
-        stroke(255);
+        stroke(dg);
         strokeWeight(8);
         rect(x-4, y+10, windowWidth/2+10, windowHeight/2-85);
 //actual marco inside
         
-        
-        
-        
         stroke(g);
-        strokeWeight(4);
-        rect(x+12, y+11, windowWidth/2-22, windowHeight/2-87);
+        strokeWeight(6);
+        rect(x-2, y+12, windowWidth/2+8, windowHeight/2-87);
 //marco back
     //orange shadow outside
         stroke(dn);
         strokeWeight(8);
         noFill();
-        rect(x + windowWidth/y-4, y + windowHeight/16, windowWidth/2+13, windowHeight/2.3);
+        rect(x + windowWidth/y-5, y + windowHeight/16, windowWidth/2+13, windowHeight/2.3);
 //marco half
         strokeWeight(8);
         stroke(dg);
@@ -82,10 +79,10 @@ function draw() {
         noFill();
         stroke(lg);
         strokeWeight(4);
-        rect(x-2.1 + windowWidth/y, y + windowHeight/12-7, windowWidth/2-5, windowHeight/2.5);
+        rect(x-5 + windowWidth/y, y + windowHeight/12-10, windowWidth/2+6, windowHeight/2.3);
 
 //shadow marco front window
-        stroke(255);
+        stroke(dg);
         strokeWeight(10);
         rect(x-5 + windowWidth/y, y + windowHeight/15-10, windowWidth/2+10, windowHeight/2.35);
         

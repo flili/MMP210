@@ -31,7 +31,8 @@ h1{
     }
 h2{
     color: black;
-    font-family: 'Lobster Two', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
 }
 
 p{
@@ -45,7 +46,6 @@ nav{
     display: block;
 }
 nav li{
-    
     display: inline-block;
     list-style-type: none;
     margin-right: 20px;
@@ -58,12 +58,9 @@ nav a{
     text-align: center;
 }
  nav a:hover {
-     text-decoration: none;
+    text-decoration: none;
     color: white;
     transition:  color 1s ease-in-out;
-}
-a{
-    color: red;
 }
 a:hover {
     color: cyan;

@@ -1,3 +1,4 @@
+//self portrait
 function setup() {
     //use code to create and draw on browser
     //createCanvas(width, height)

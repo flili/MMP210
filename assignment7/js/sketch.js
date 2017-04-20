@@ -138,7 +138,7 @@ function draw() {
         
         rect(x-2, y+325, windowWidth/1.9, windowHeight/65);
         
-        
+        0
         
          
         }

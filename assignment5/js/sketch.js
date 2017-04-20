@@ -1,3 +1,4 @@
+
 // windows
 function setup() { 
    createCanvas(740,2500);
@@ -14,26 +15,22 @@ function draw() {
     
     
 //colors
-//green
+    //green
     var g = color (51, 63, 55);
-//light Green
+    //light Green
     var lg = color (143, 151, 123);
-//dark Green
+    //dark Green
     var dg = color (20, 31, 25);
-//Dark Orange
+    //Dark Orange
     var dn = color (131,67,73);
-//light Orange
+    //light Orange
     var lo = color (186,82,76);
 
     
     for ( var x = windowWidth/4; x < width; x+=windowWidth) {
     for (var y = windowHeight/4; y < height; y+=windowHeight) {
-        drawWindow(x + 150 * i, y + 150 * h, windowWidth, windowHeight);
-        }
-    }
-}
         
-function drawWindow(x, y, windowWidth, windowHeight) {
+        
         noStroke();
         fill(dg);
         rect(x-10, y, windowWidth/2+15, windowHeight/2);
@@ -41,7 +38,7 @@ function drawWindow(x, y, windowWidth, windowHeight) {
 //shadow top curtain window
         fill(dn);
         rect(x, y, windowWidth/2, windowHeight/8);
-
+        
 //curtain widow
         fill(lo);
         rect(x, y + windowHeight/9, windowWidth/2, windowHeight/4);
@@ -63,7 +60,7 @@ function drawWindow(x, y, windowWidth, windowHeight) {
         strokeWeight(6);
         rect(x-2, y+12, windowWidth/2+8, windowHeight/2-87);
 //marco back
-//orange shadow outside
+    //orange shadow outside
         stroke(dn);
         strokeWeight(8);
         noFill();
@@ -98,17 +95,17 @@ function drawWindow(x, y, windowWidth, windowHeight) {
 //top window
         noStroke();
         
-//light green shadow up outside
+    //light green shadow up outside
         fill(lg);
         rect(x-33, y-2, windowWidth/1.3, windowHeight/25);
-//dark
+    //dark
         fill(dg);
         
         rect(x-20, y+5, windowWidth/1.5, windowHeight/15,x);
         
         rect(x-34, y, windowWidth/1.28, windowHeight/25);
         
-//actual window
+    //actual window
         
         fill(g);
         rect(x-15, y+10, windowWidth/1.6, windowHeight/20,x);
@@ -117,11 +114,11 @@ function drawWindow(x, y, windowWidth, windowHeight) {
         
         
 //Bottom Window
-//light green shadow window down
+    //light green shadow window down
         fill(lg);
         rect(x-20, y+298, windowWidth/1.5, windowHeight/50);
         
-//dark shadow
+    //dark shadow
         fill(dg);
         noStroke();
         
@@ -134,12 +131,18 @@ function drawWindow(x, y, windowWidth, windowHeight) {
         
         rect(x-2, y+330, windowWidth/1.9, windowHeight/50);
         
-//actual window
+    //actual window
         fill(g);
         rect(x-22, y+299.9, windowWidth/1.46, windowHeight/60);
         
         rect(x-15, y+315, windowWidth/1.60, windowHeight/100,x);
         
         rect(x-2, y+325, windowWidth/1.9, windowHeight/65);
-    
+        
+        
+        
+         
+        }
+    }
+        
 }

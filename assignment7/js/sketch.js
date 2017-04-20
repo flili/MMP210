@@ -6,6 +6,18 @@ function setup() {
 
 function draw() {
     background(220);
+    //colors
+    //green
+    var g = color (51, 63, 55);
+    //light Green
+    var lg = color (143, 151, 123);
+    //dark Green
+    var dg = color (20, 31, 25);
+    //Dark Orange
+    var dn = color (131,67,73);
+    //light Orange
+    var lo = color (186,82,76);
+    
     
     var windowWidth = width/6; // window width
     var windowHeight = height/2; // window height
@@ -148,10 +160,7 @@ function drawWindow(x, y, windowWidth, windowHeight) {
          
         }
     }
-        
-=======
-    fill(50);
-    noStroke();
-    rect(x - windowWidth/16, y + windowHeight/2, windowWidth/2 + windowWidth/8, windowHeight/16);
->>>>>>> origin/master
-}
+   // fill(50);
+    //noStroke();
+//    rect(x - windowWidth/16, y + windowHeight/2, windowWidth/2 + windowWidth/8, windowHeight/16);
+//}

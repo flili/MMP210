@@ -6,7 +6,7 @@ function setup() {
     
     
     noStroke();
-    
+//number of rectangles
     var numberOfRectangles = 300;
     var columns = Math.sqrt(numberOfRectangles);
     var rows = Math.sqrt(numberOfRectangles);
@@ -21,22 +21,28 @@ function setup() {
             var tempX = x;
             var tempW = w;
             var tempH = h;
-            
-            if (y < height/2.5) {
+//sky level
+            if (y < height/2.4) {
+                
+//sky color random
                 r = random(229, 236);
                 g = random(121, 59);
                 b = random(27, 59);
+//
                 x += random(-50, 10);
                 w = random(100, 200);
-                
-            } else if (y > height * 3/4) {
+//sand level
+            } else if (y > height * 3/4.5) {
                 r = random(206, 210);
                 g = random(139, 165);
                 b = random(84, 109);
                 
                 
-
-                w = h = random(50, 90);
+//sand size 
+                w = h = random(1, 10);
+								for (var i = 0; i < 600; i++) {
+									ellipse(x + random(0,w*25), y + random(0,h*15), 2);
+								}
                 
             } else {
 
@@ -49,17 +55,17 @@ function setup() {
 
             fill(r,g, b);            
             
+//sand level
+            if ( y > height * 3/4.2) {
 
-            if ( y > height * 3/4) {
-
-                ellipse(x-15, y-10, w+5, h-10);
+//sand color random
                 fill(
                     random(206, 210),
                     random(139, 165),
                     random(84, 109)
                 
                 );
-                ellipse(x, y, w/3, h/3);
+                ellipse(x, y, w, h);
             } else {
                 rect(x, y, w, h);
             }
@@ -69,11 +75,19 @@ function setup() {
             h = tempH;
         }
     }
+    
+//sun color random
     fill(r,g,b)
     fill(
         random(226,255),
-        random(195,223),
+        random(130,223),
         random(17,52)
     );
-    ellipse(200,100,100);
+    ellipse(200,100,150);
+    
+// bird
+    fill('black')
+    noStroke;
+
+    triangle (10,20,50,30,90,30);
 }

@@ -10,9 +10,6 @@ function setup() {
     var columns = Math.sqrt(numberOfRectangles);
     var rows = Math.sqrt(numberOfRectangles);
     
-//    var rows = 5;
-//    var columns = numberOfRectangles / rows;
-    
     var w = width / columns;
     var h = height / rows;
 
@@ -24,52 +21,50 @@ function setup() {
             var tempW = w;
             var tempH = h;
             
-            // rain
-            if (y < height/4) {
-                // random rain blue color
+//palms
+            if (y < height/2.5) {
+// random ocean blue color
+                r = random(229, 236);
+                g = random(121, 59);
+                b = random(27, 59);
+//random ocean size and position
+                x += random(-50, 10);
+                w = random(100, 200);
+                
+            } else if (y > height * 3/4) {
+// random ocean color
                 r = random(0, 50);
                 g = random(150, 255);
                 b = random(200, 255);
-                //random rain size and position
-                x += random(-25, 25);
-                w = random(10, 20);
-            } else if (y > height * 3/4) {
-                // random flower color
-                r = random(200, 255);
-                g = random(0, 100);
-                b = random(100, 200);
-                // random flower size
-                w = h = random(10, 40);
+                
+                
+// random ocean waves size
+                w = h = random(50, 90);
+                
             } else {
-                // random green grass color
-                r = random(0, 50);
-                g = random(150, 255);
-                b = random(0, 100);
+// random sand color
+                r = random(206, 210);
+                g = random(139, 165);
+                b = random(84, 109);
+                ellipse(x,y,h,w);
             }
             
-            // all of the color fills
+// all of the color fills
             fill(r,g, b);            
             
-            // flowers
+// oean
             if ( y > height * 3/4) {
-                // flowers
+// ocean
                 ellipse(x, y, w, h);
-                //stems
+//ocean
                 fill(
                     random(0, 50),
                     random(150, 255),
-                    random(0, 100)
+                    random(200, 255)
                 );
-                rect(x, y, w/8, h);
-                //inside 
-                fill(
-                    random(0, 255),
-                    random(0, 100),
-                    random(100, 200)
-                );
-                ellipse(x, y, w/2, h/2);
+                ellipse(x, y, w/3, h/3);
             } else {
-                // rain & grass
+// palm and sand
                 rect(x, y, w, h);
             }
             

@@ -1,48 +1,77 @@
 // system variables
-var ellipseWidth = 0;
-var shapeSize = 100;
-function setup() { 
-   createCanvas(640, 360);
-}
-
-function draw() {
-    background(50);
+//logo
+function setup() {
+    //use code to create and draw on browser
+    //createCanvas(width, height)
+    createCanvas(700, 450);
     
-     /* draw a grid */
-    stroke("green");
-    line(0, height/2, width, height/2);
-    line(width/2, 0, width/2, height);
+//values 
+    var u = 10;
+    var f = 20;
+    var j = 60;
+    var i = 100;
+    var t = 130;
+    var s = 160;
+    var v = 220;
+    var g = 255;
+    var e = 250;
+    var h = 280;
+    var d = 300;
+    var a = 320;
+    var b = 330;
+    var c = 400;
+    var y = 460;
+    var q = 500;
     
+    var m = 370;
+    var n = 80;
+    var o = 350;
+// colors
+    var r = color (v,f,j);
+    var p = color (g,192,203);
+    var wh=color(g);
+    var w = u;
+    var r1, g1, b1;
     
-    if (mouseX != pmouseX) {
-        if (shapeSize != 0) {
-            shapeSize -= 0.05;
-        }
-    }
-    console.log(shapeSize);
+    background(p);
+    //fane
+    //F
+    stroke(r1, g1, b1); 
+    stroke(
+        random(244,161),
+        random(38,41),
+        random(48,65)
+    );
+    pop();
+    strokeWeight(w);
+    line(c, i , q, i);
+    line(q, i , q, s);
+    line(y, i , y, t);
     
-    ellipse(mouseX, mouseY, shapeSize, shapeSize);
+    //A
+    line(q,s,c,s);
+    line(q,s,q,v);
+    line(q,v,c,v);
+    line(y,s,y,v);
     
-    if (mouseX < width/2){
-        fill("lightblue");
-        rectMode(CENTER);
-        rect(pmouseX, pmouseY, shapeSize/2, shapeSize/2);
-    } else {
-        fill("red"); 
-        ellipse(pmouseX, pmouseY, shapeSize/2, shapeSize/2);
-    }
+    //N
+    line(q,v,c,h);
+    line(c,h,q,h);
     
+    //E
     
+    line(q,h,q,b);
+    line(c,h,c,b);
+    line(y,h,y,a);
+    //line
     
-    
-    
-
-    if ( ellipseWidth < width/2 ) {
-        ellipseWidth ++;   
-    } else {
-         ellipseWidth = 0;
-    }
-   
-    fill(frameCount, 0, 255);
-    ellipse(width/2, height/2, ellipseWidth,frameCount/2);
+    line(m,n,m,o)
+    //TEXT
+    fill(r);
+    strokeWeight(w);
+    stroke(wh);
+    textSize(e);
+    textFont("helvetica");
+    textStyle(BOLD);
+    text("李", i, d);
 }

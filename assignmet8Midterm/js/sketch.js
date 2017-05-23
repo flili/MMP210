@@ -66,7 +66,7 @@ function setup() {
                 
                 );
                 ellipse(x, y, w, h);
-            } else {
+            } else{
                 rect(x, y, w, h);
             }
             

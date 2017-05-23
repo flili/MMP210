@@ -1,12 +1,25 @@
+
 // windows
 function setup() { 
-   createCanvas(640, 480);
+   createCanvas(740,2500);
     noStroke();
 }
 
 function draw() {
-    background(220);
-    //colors
+//Building background color 
+    background(51, 63, 55);
+    var windowWidth = width/3; // window width
+    var windowHeight = height/4; // window height
+    var x = 10, y = 10;
+    for (var i = 0; i < 2; i++) {
+        for (var h = 0; h < 4; h++) {
+            drawWindow(x+100 + 350 * i, y+100 + 550 * h, windowWidth, windowHeight);
+        }
+    }
+    
+}   
+    
+//colors
     //green
     var g = color (51, 63, 55);
     //light Green
@@ -17,36 +30,23 @@ function draw() {
     var dn = color (131,67,73);
     //light Orange
     var lo = color (186,82,76);
-    
-    
-    var windowWidth = width/6; // window width
-    var windowHeight = height/2; // window height
-    var x = 10, y = 10;
-    for (var i = 0; i < 4; i++) {
-        for (var h = 0; h < 2; h++) {
-            drawWindow(x + 150 * i, y + 150 * h, windowWidth, windowHeight);
-        }
-    }
-    
-}
 
-function drawWindow(x, y, windowWidth, windowHeight) {
-    fill(167, 82, 54);
-    rect(x, y, windowWidth/2, windowHeight/2);
-           
-    fill("black");
-    stroke(167, 82, 54);
-           
-    rect(x, y, windowWidth/4, windowHeight/8);
-    rect(x, y + windowHeight/8, windowWidth/4, windowHeight/8);
-    rect(x + windowWidth/4, y + windowHeight/8, windowWidth/4, windowHeight/8);
-    rect(x + windowWidth/4, y + windowHeight/8 * 2, windowWidth/4, windowHeight/8);
     
-<<<<<<< HEAD
-    for ( var x = windowWidth/4; x < width; x+=windowWidth) {
-    for (var y = windowHeight/4; y < height; y+=windowHeight) {
-        
-        
+function drawWindow(x, y, windowWidth, windowHeight) {
+//colors
+    //green
+    var g = color (51, 63, 55);
+    //light Green
+    var lg = color (143, 151, 123);
+    //dark Green
+    var dg = color (20, 31, 25);
+    //Dark Orange
+    var dn = color (131,67,73);
+    //light Orange
+    var lo = color (186,82,76);
+           
+    fill(167, 82, 54);
+    rect(x, y, windowWidth/2, windowHeight/2);         
         noStroke();
         fill(dg);
         rect(x-10, y, windowWidth/2+15, windowHeight/2);
@@ -155,12 +155,5 @@ function drawWindow(x, y, windowWidth, windowHeight) {
         
         rect(x-2, y+325, windowWidth/1.9, windowHeight/65);
         
-        0
         
-         
-        }
-    }
-   // fill(50);
-    //noStroke();
-//    rect(x - windowWidth/16, y + windowHeight/2, windowWidth/2 + windowWidth/8, windowHeight/16);
-//}
+}

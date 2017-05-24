@@ -1,45 +1,32 @@
-
-function setup() { 
-    createCanvas(640, 480);
-    noStroke();
-  
+function setup() {
+	createCanvas(400, 400);
+    r = random(255); 
+    g = random(255);
+    b = random(255);
 }
 
-function draw() {
-    background(0);
-    fill("green");
-    ellipse(0, 0, 100);
-    
-   
-    translate(width/2, height/2);
+function draw(){
+	background(0);
 
-    push();
-    rotate(r);
-    rectMode(CENTER);
-    rect(100, 100, 50, 50);
-    pop();
-    
-    push();
-    rotate(-r);
-    fill("blue");
-    rect(150,150, 50,50);
-    pop();
-    
-    push();
-    rotate(r*5);
-    fill("yellow");
-    rect(x, y, 50, 50);
-    x += 0.5;
-    y += 0.5;
-    pop();
-    
-    r += 0.01;
-    
-    push();
-    fill("pink");
-    for (var i = 0; i < 16; i++) {    
-        ellipse(100, 0, 50);
-        rotate(PI/8);
-    }
-    pop();
+	translate(width/2, height/2);
+//Loop for the 5 flowers
+	for (var i = 0; i < 5; i++) {
+		push();
+		rotate(TWO_PI * i / 5);
+		var tx = 200 * noise(0.01*frameCount);
+		translate(tx, 0);
+        fill(frameCount,r,g,b);
+		ellipse (0, 0, 20, 20);
+//pedals
+		for (var j = 0; j < 6; j++) {
+			push();
+			rotate(TWO_PI * j / 6);
+			var rx = 60 * noise(0.01*frameCount + 20);
+        fill(r,g,b);
+			ellipse(rx, 1, 25, 10);
+			pop();
+		}		
+		translate()
+		pop();
+	}
 }

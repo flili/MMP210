@@ -8,13 +8,13 @@ var spaceshipSpeed = [];
 var spaceshipColor = [];
  
 function setup() { 
-    createCanvas(720, 360);
+    createCanvas(400, 360);
     
     for (var i = 0; i < numSpaceships; i++) {
-        xPositions[i] = random(0, width);
+        xPositions[i] = random(0, width*5);
         yPositions[i] = random(0, height);
-        spaceshipSize[i] = random(20, 100);
-        spaceshipSpeed[i] = random(0.1, 20);
+        spaceshipSize[i] = random(20, 300);
+        spaceshipSpeed[i] = random(0.1, 2.0);
         spaceshipColor[i] = color(
             random(0,255), 
             random(0,255), 
@@ -50,17 +50,17 @@ function ship(x, y, spaceshipWidth) {
     
     
     
-    // wing 1
-    triangle(x, y - spaceshipWing, x, y + spaceshipHeight + spaceshipWing, x + spaceshipWidth, y + spaceshipHeight/2);
-    
-    // wing 2
-    triangle(x + wingMargin, y - spaceshipWing + wingMargin/2, x + wingMargin, y + spaceshipHeight + spaceshipWing - wingMargin/2, x + spaceshipWidth, y + spaceshipHeight/2);
-    
-    // body
-    rect(x, y, spaceshipWidth, spaceshipHeight);
-    
-    // cockpit
-    triangle(x + spaceshipWidth, y, x + spaceshipWidth, y + spaceshipHeight, x + spaceshipWidth + cockpitWidth, y + spaceshipHeight/2);
+//    // wing 1
+//    triangle(x, y - spaceshipWing, x, y + spaceshipHeight + spaceshipWing, x + spaceshipWidth, y + spaceshipHeight/2);
+//    
+//    // wing 2
+//    triangle(x + wingMargin, y - spaceshipWing + wingMargin/2, x + wingMargin, y + spaceshipHeight + spaceshipWing - wingMargin/2, x + spaceshipWidth, y + spaceshipHeight/2);
+//    
+//    // body
+//    rect(x, y, spaceshipWidth, spaceshipHeight);
+//    
+//    // cockpit
+//    triangle(x + spaceshipWidth, y, x + spaceshipWidth, y + spaceshipHeight, x + spaceshipWidth + cockpitWidth, y + spaceshipHeight/2);
     
     // window 
     ellipse(x + spaceshipWidth + cockpitWidth/4, y + spaceshipHeight/4, spaceshipHeight/2);

@@ -14,7 +14,7 @@ function draw(){
 		push();
 		rotate(TWO_PI * i / 5);
 		var tx = 200 * noise(0.01*frameCount);
-		translate(tx, 0);
+		translate(tx, 7);
         fill(frameCount,r,g,b);
 		ellipse (0, 0, 20, 20);
 //pedals
@@ -22,7 +22,7 @@ function draw(){
 			push();
 			rotate(TWO_PI * j / 6);
 			var rx = 60 * noise(0.01*frameCount + 20);
-        fill(r,g,b);
+        fill(frameCount,r,b);
 			ellipse(rx, 1, 25, 10);
 			pop();
 		}		

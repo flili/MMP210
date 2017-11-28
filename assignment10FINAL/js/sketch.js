@@ -5,9 +5,9 @@ var r, g, b;
 noStroke();
 
 function setup() {
-    createCanvas(700, 400);
-    eyel = new eyes(250, 100, 70);
-    eyer = new eyes(450, 100, 70);
+    createCanvas(440, 400);
+    eyel = new eyes(130, 150, 70);
+    eyer = new eyes(290, 150, 70);
 
   //Audio input
   mic = new p5.AudioIn();
@@ -47,11 +47,11 @@ function eyes(tx, ty, ts) {
     rotate(this.angle);
     fill(r,g,b)
     fill(
-        random(226,255),
-        random(130,223),
-        random(17,52)
+        random(16,255),
+        random(30,223),
+        random(17,252)
     );
-    ellipse(this.size / 4, 0, this.size / 2, this.size / 2);
+    ellipse(this.size / 4, 0, this.size / 2, this.size /2);
     pop();
   };
 }

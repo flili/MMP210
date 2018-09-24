@@ -12,8 +12,6 @@ body{
 /* This centers our sketch vertically. */
     align-items: center;
 }
-#container{
-    width: 560px;
-    margin: 0 auto;
-    padding: 1px;
+#canvas{
+    width: 100%;
 }
